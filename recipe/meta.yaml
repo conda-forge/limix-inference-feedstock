@@ -13,7 +13,7 @@ source:
 
 build:
   number: 2
-  skip: True  # [win and py<35]
+  skip: True  # [win or py<36]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -21,21 +21,21 @@ requirements:
     - python
     - setuptools
     - ncephes
-#    - liknorm >=1.2.3
+    - liknorm >=1.2.3
   run:
     - python
     - ncephes
     - optimix
-#    - numpy >=1.9.2
+    - numpy >=1.9.2
     - scipy
     - numpy-sugar
-#    - cachetools >=2.0
-#    - tqdm >=4
-#    - liknorm >=1.2.3
+    - cachetools >=2.0
+    - tqdm >=4
+    - liknorm >=1.2.3
 
 test:
-#  requires:
-#    - pytest >=3
+  requires:
+    - pytest >=3
   imports:
     - limix_inference
   commands:
