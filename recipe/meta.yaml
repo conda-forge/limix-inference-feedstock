@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
+  skip: True  # [win and py<35 or py36]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -46,7 +46,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Simple, fast, extensible JSON encoder/decoder for Python'
+  summary: 'Fast inference for Generalized Linear Mixed Models'
   doc_url: http://limix-inference.readthedocs.io/
   dev_url: https://github.com/glimix/limix-inference
 
