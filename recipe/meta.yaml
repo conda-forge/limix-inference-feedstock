@@ -1,6 +1,6 @@
 {% set name = "limix-inference" %}
-{% set version = "1.0.8" %}
-{% set sha256 = "902fbac1abfb513e5d35b58bcd96ebaa77956e3b3c987e274618e84b4fcc37cd" %}
+{% set version = "1.0.14" %}
+{% set sha256 = "71229116788b4eaf2ae8a2344a99a5782a1ae55374c5d17209607cb69b51bac8" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 6
+  number: 0
   skip: True  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
@@ -25,13 +25,14 @@ requirements:
   run:
     - python
     - ncephes
-    - optimix
+    - optimix >=1.1.7
     - numpy >=1.9.2
     - scipy
     - numpy-sugar
     - cachetools >=2.0
     - tqdm >=4
     - liknorm >=1.2.3
+    - scipy-sugar >=1.0.1
 
 test:
   requires:
