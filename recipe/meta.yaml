@@ -1,6 +1,6 @@
 {% set name = "limix-inference" %}
-{% set version = "1.0.9" %}
-{% set sha256 = "7398a7a2c1d7282aab49be46c72f776256487251123fd9711a78e4fec712dd5f" %}
+{% set version = "1.0.14" %}
+{% set sha256 = "71229116788b4eaf2ae8a2344a99a5782a1ae55374c5d17209607cb69b51bac8" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ requirements:
   run:
     - python
     - ncephes
-    - optimix >=1.1.5
+    - optimix >=1.1.7
     - numpy >=1.9.2
     - scipy
     - numpy-sugar
