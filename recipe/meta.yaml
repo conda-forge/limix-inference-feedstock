@@ -1,6 +1,6 @@
 {% set name = "limix-inference" %}
-{% set version = "1.0.14" %}
-{% set sha256 = "71229116788b4eaf2ae8a2344a99a5782a1ae55374c5d17209607cb69b51bac8" %}
+{% set version = "1.1.4" %}
+{% set sha256 = "e866c0022d9bbf0c9ebe7c5984c6793075391cc88b6b1317fef7b7287b72ee9e" %}
 
 package:
   name: {{ name|lower }}
@@ -24,11 +24,11 @@ requirements:
     - liknorm >=1.2.3
   run:
     - python
-    - ncephes
-    - optimix >=1.1.7
+    - ncephes >=1.0.21
+    - optimix >=1.2.5
     - numpy >=1.9.2
-    - scipy
-    - numpy-sugar
+    - scipy >=0.19
+    - numpy-sugar >=1.0.28
     - cachetools >=2.0
     - tqdm >=4
     - liknorm >=1.2.3
