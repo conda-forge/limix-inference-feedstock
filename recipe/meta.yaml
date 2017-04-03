@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: True  # [win32 or (win and not py35)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -28,11 +28,12 @@ requirements:
     - optimix >=1.2.5
     - numpy >=1.9.2
     - scipy >=0.19
-    - numpy-sugar >=1.0.28
+    - numpy-sugar >=1.0.31
     - cachetools >=2.0
     - tqdm >=4
     - liknorm >=1.2.3
     - scipy-sugar >=1.0.1
+    - liknorm-py >=1.0.3
 
 test:
   requires:
@@ -49,7 +50,7 @@ about:
   license_file: LICENSE
   summary: 'Fast inference for Generalized Linear Mixed Models'
   doc_url: http://limix-inference.readthedocs.io/
-  dev_url: https://github.com/glimix/limix-inference
+  dev_url: https://github.com/limix/limix-inference
 
 extra:
   recipe-maintainers:
