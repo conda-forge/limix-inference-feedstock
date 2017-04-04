@@ -1,6 +1,6 @@
 {% set name = "limix-inference" %}
-{% set version = "1.1.4" %}
-{% set sha256 = "e866c0022d9bbf0c9ebe7c5984c6793075391cc88b6b1317fef7b7287b72ee9e" %}
+{% set version = "1.1.5" %}
+{% set sha256 = "2e22c21de4c6af10e7cd94becf91e9443bed5f64303afe5f31e399d856c81ce8<Paste>" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win32 or (win and not py35)]
+  skip: True  # [win32 or (win and py<35)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -28,12 +28,12 @@ requirements:
     - optimix >=1.2.5
     - numpy >=1.9.2
     - scipy >=0.19
-    - numpy-sugar >=1.0.31
+    - numpy-sugar >=1.0.32
     - cachetools >=2.0
     - tqdm >=4
     - liknorm >=1.2.3
     - scipy-sugar >=1.0.1
-    - liknorm-py >=1.0.3
+    - liknorm-py >=1.0.4
 
 test:
   requires:
@@ -44,7 +44,7 @@ test:
     - python -c "import sys; import limix_inference; sys.exit(limix_inference.test())"
 
 about:
-  home: http://github.com/glimix/limix-inference
+  home: http://github.com/limix/limix-inference
   license: MIT
   license_family: MIT
   license_file: LICENSE
