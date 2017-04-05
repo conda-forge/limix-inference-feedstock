@@ -22,9 +22,11 @@ requirements:
     - setuptools
     - ncephes
     - liknorm >=1.2.3
+    - numba >=0.31.0
   run:
     - python
     - ncephes >=1.0.21
+    - numba >=0.31.0
     - optimix >=1.2.5
     - numpy >=1.9.2
     - scipy >=0.19
