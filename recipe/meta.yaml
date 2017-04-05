@@ -1,6 +1,6 @@
 {% set name = "limix-inference" %}
-{% set version = "1.1.5" %}
-{% set sha256 = "2e22c21de4c6af10e7cd94becf91e9443bed5f64303afe5f31e399d856c81ce8<Paste>" %}
+{% set version = "1.1.6" %}
+{% set sha256 = "2e22c21de4c6af10e7cd94becf91e9443bed5f64303afe5f31e399d856c81ce8" %}
 
 package:
   name: {{ name|lower }}
