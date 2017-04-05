@@ -20,11 +20,11 @@ requirements:
   build:
     - python
     - setuptools
-    - ncephes
+    - ncephes[numba]
     - liknorm >=1.2.3
   run:
     - python
-    - ncephes >=1.0.21
+    - ncephes[numba] >=1.0.21
     - optimix >=1.2.5
     - numpy >=1.9.2
     - scipy >=0.19
