@@ -1,7 +1,7 @@
 About limix-inference
 =====================
 
-Home: http://github.com/glimix/limix-inference
+Home: http://github.com/limix/limix-inference
 
 Package license: MIT
 
