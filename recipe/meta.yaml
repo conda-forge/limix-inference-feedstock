@@ -1,6 +1,6 @@
 {% set name = "limix-inference" %}
-{% set version = "1.0.8" %}
-{% set sha256 = "902fbac1abfb513e5d35b58bcd96ebaa77956e3b3c987e274618e84b4fcc37cd" %}
+{% set version = "1.1.5" %}
+{% set sha256 = "2e22c21de4c6af10e7cd94becf91e9443bed5f64303afe5f31e399d856c81ce8" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 6
-  skip: True  # [win]
+  number: 0
+  skip: True  # [win32 or (win and py<35)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -22,16 +22,20 @@ requirements:
     - setuptools
     - ncephes
     - liknorm >=1.2.3
+    - numba >=0.31.0
   run:
     - python
-    - ncephes
-    - optimix
+    - ncephes >=1.0.21
+    - numba >=0.31.0
+    - optimix >=1.2.5
     - numpy >=1.9.2
-    - scipy
-    - numpy-sugar
+    - scipy >=0.19
+    - numpy-sugar >=1.0.32
     - cachetools >=2.0
     - tqdm >=4
     - liknorm >=1.2.3
+    - scipy-sugar >=1.0.1
+    - liknorm-py >=1.0.4
 
 test:
   requires:
@@ -42,13 +46,13 @@ test:
     - python -c "import sys; import limix_inference; sys.exit(limix_inference.test())"
 
 about:
-  home: http://github.com/glimix/limix-inference
+  home: http://github.com/limix/limix-inference
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: 'Fast inference for Generalized Linear Mixed Models'
   doc_url: http://limix-inference.readthedocs.io/
-  dev_url: https://github.com/glimix/limix-inference
+  dev_url: https://github.com/limix/limix-inference
 
 extra:
   recipe-maintainers:
