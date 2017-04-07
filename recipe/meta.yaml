@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win32 or (win and py<35)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
@@ -46,12 +46,12 @@ test:
     - python -c "import sys; import limix_inference; sys.exit(limix_inference.test())"
 
 about:
-  home: http://github.com/limix/limix-inference
+  home: https://github.com/limix/limix-inference
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: 'Fast inference for Generalized Linear Mixed Models'
-  doc_url: http://limix-inference.readthedocs.io/
+  doc_url: https://limix-inference.readthedocs.io/
   dev_url: https://github.com/limix/limix-inference
 
 extra:
