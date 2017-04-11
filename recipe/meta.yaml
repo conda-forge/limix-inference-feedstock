@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win32 or (win and py<35)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
@@ -30,7 +30,7 @@ requirements:
     - optimix >=1.2.5
     - numpy >=1.9.2
     - scipy >=0.19
-    - numpy-sugar >=1.0.32
+    - numpy-sugar >=1.0.34
     - cachetools >=2.0
     - tqdm >=4
     - liknorm >=1.2.3
