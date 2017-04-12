@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  skip: True  # [win32 or (win and py<35)]
+  number: 3
+  skip: true  # [win32 or (win64 and py<35)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - ncephes >=1.0.21
     - numba >=0.31.0
     - optimix >=1.2.5
-    - numpy >=1.9.2
+    - numpy >=1.10
     - scipy >=0.19
     - numpy-sugar >=1.0.34
     - cachetools >=2.0
