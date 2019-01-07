@@ -13,12 +13,12 @@ source:
 
 build:
   number: 1000
-  skip: true  # [win32 or (win64 and py<35)]
+  skip: true  # [win32 or (win64 and py<35) or ]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python <3.7
     - pip
     - ncephes
     - liknorm >=1.2.3
@@ -26,7 +26,7 @@ requirements:
     - pytest >=3
     - pytest-runner >=2.9
   run:
-    - python
+    - python <3.7
     - ncephes >=1.0.21
     - numba >=0.31.0
     - optimix >=1.2.5,<=1.2.12
@@ -50,7 +50,7 @@ test:
   # E
   # E       (mismatch 100.0%)
   # E        x: array(-267.066269)
-  # E        y: array(-266.951752)  
+  # E        y: array(-266.951752)
   # commands:
   #   - python -c "import sys; import limix_inference; sys.exit(limix_inference.test())"
 
