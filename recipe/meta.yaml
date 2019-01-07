@@ -1,6 +1,6 @@
 {% set name = "limix-inference" %}
-{% set version = "1.1.5" %}
-{% set sha256 = "2e22c21de4c6af10e7cd94becf91e9443bed5f64303afe5f31e399d856c81ce8" %}
+{% set version = "1.1.6" %}
+{% set sha256 = "5e55acef34aa0164171a35fe1de5a761fdf31902b98e8daf36d54309957f8bb2" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1003
+  number: 1000
   skip: true  # [win32 or (win64 and py<35)]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -23,6 +23,8 @@ requirements:
     - ncephes
     - liknorm >=1.2.3
     - numba >=0.31.0
+    - pytest >=3
+    - pytest-runner >=2.9
   run:
     - python
     - ncephes >=1.0.21
