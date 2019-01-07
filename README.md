@@ -18,7 +18,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/limix-inference-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/limix-inference-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/limix-inference-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/limix-inference-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/limix-inference-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/limix-inference-feedstock/branch/master)
 
 Current release info
 ====================
