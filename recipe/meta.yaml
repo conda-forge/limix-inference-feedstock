@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   skip: true  # [win32 or (win64 and py<35) or (py==37)]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
